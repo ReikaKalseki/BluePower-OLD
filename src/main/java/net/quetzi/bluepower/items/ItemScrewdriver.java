@@ -42,7 +42,7 @@ import net.quetzi.bluepower.tileentities.tier3.TileCPU;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemScrewdriver extends Item {
+public class ItemScrewdriver extends Item implements IBlueStoneScrewdriver {
     
     public ItemScrewdriver() {
     
@@ -93,4 +93,14 @@ public class ItemScrewdriver extends Item {
     
         return EnumAction.block;
     }
+    
+    @Override
+	public boolean canWrench(World world, int x, int y, int z, EntityPlayer player) {
+		return true;
+	}
+
+	@Override
+	public void wrenchUsed(World world, int x, int y, int z, EntityPlayer player) {
+		
+	}
 }
