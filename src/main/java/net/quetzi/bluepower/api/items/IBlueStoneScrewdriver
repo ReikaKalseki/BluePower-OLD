@@ -1,0 +1,13 @@
+package net.quetzi.bluepower.api.items;
+
+import net.minecraft.entity.player.EntityPlayer;
+
+/***
+ * Implement this interface on subclasses of Item to have that item work as a wrench for bluepower
+ */
+public interface IBlueStoneScrewdriver {
+
+	public boolean canWrench(World world, int x, int y, int z, EntityPlayer player);
+
+	public void onWrenchUsed(World world, int x, int y, int z, EntityPlayer player);
+}
