@@ -260,7 +260,7 @@ public abstract class GateBase extends BPPartFace {
     @Override
     public boolean onActivated(EntityPlayer player, MovingObjectPosition mop, ItemStack item) {
     
-        if (item != null && item.getItem() == BPItems.screwdriver) {
+        if (item != null && item.getItem() instanceof IBlueStoneScrewdriver) {
             if (player.isSneaking()) {
                 if (!world.isRemote) {
                     if (changeMode(getConnection(FaceDirection.FRONT), getConnection(FaceDirection.LEFT), getConnection(FaceDirection.BACK),
